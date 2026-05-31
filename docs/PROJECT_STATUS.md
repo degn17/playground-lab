@@ -15,6 +15,8 @@ Create the first simple version of Playground Lab. The V0.1 goal is to provide a
 - Rendered experiment cards dynamically from JavaScript
 - Added a clean responsive layout
 - Added initial documentation files
+- Confirmed GitHub Pages deployment is working
+- Added a visible `v0.1` version badge to the homepage title
 
 ## Next steps
 
@@ -26,7 +28,7 @@ Create the first simple version of Playground Lab. The V0.1 goal is to provide a
 
 ## V0.1 Deployment Result
 
-Playground Lab V0.1 has been successfully deployed through GitHub Pages.
+Playground Lab V0.1 has been successfully deployed through GitHub Pages, and the homepage now shows a visible `v0.1` version badge near the project title.
 
 Live URL:
 https://degn17.github.io/playground-lab/
