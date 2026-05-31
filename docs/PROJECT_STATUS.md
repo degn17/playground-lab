@@ -23,3 +23,19 @@ Create the first simple version of Playground Lab. The V0.1 goal is to provide a
 - Add project notes as learning happens
 - Track bugs in `docs/BUG_LIST.md`
 - Keep future changes small and easy to review
+
+## V0.1 Deployment Result
+
+Playground Lab V0.1 has been successfully deployed through GitHub Pages.
+
+Live URL:
+https://degn17.github.io/playground-lab/
+
+Current workflow:
+1. Codex creates or updates code through PR.
+2. PR is reviewed in GitHub.
+3. PR is merged into main.
+4. GitHub Pages deploys automatically.
+5. The result can be verified through a browser or mobile phone.
+
+This confirms that the project can now be developed and tested remotely without relying on local git sync for every small update.
