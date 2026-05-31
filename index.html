@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Playground Lab</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-content">
+      <p class="eyebrow">Personal tech playground</p>
+      <div class="title-row">
+        <h1>Playground Lab</h1>
+        <span class="version-badge" aria-label="Current version">v0.1</span>
+      </div>
+      <p class="intro">
+        A simple place for learning frontend development, practicing GitHub workflow,
+        and building small Codex-assisted experiments one step at a time.
+      </p>
+    </div>
+  </header>
+
+  <main class="page-content">
+    <section class="experiments-section" aria-labelledby="experiments-heading">
+      <div class="section-heading">
+        <h2 id="experiments-heading">Experiments</h2>
+        <p>Small beginner-friendly ideas to build, test, break, and improve.</p>
+      </div>
+
+      <div id="experiment-grid" class="experiment-grid" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
