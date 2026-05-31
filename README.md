@@ -20,6 +20,21 @@ This project is intentionally simple. Version 0.1 uses only vanilla HTML, CSS, a
 
 No install step is needed.
 
+
+## Deployment with GitHub Pages
+
+This project is ready to deploy with GitHub Pages because it is a static site with `index.html` in the repository root. No build tools or dependencies are needed.
+
+To enable GitHub Pages from the `main` branch:
+
+1. Push this repository to GitHub.
+2. Open the repository on GitHub.
+3. Go to **Settings** > **Pages**.
+4. Under **Build and deployment**, set **Source** to **Deploy from a branch**.
+5. Set **Branch** to `main` and the folder to `/ (root)`.
+6. Click **Save**.
+7. Wait for GitHub to publish the site, then use the Pages URL shown on that settings page.
+
 ## Project structure
 
 ```text
