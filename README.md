@@ -3,6 +3,7 @@
 Playground Lab is a personal tech playground for learning frontend development, GitHub workflow, and Codex-assisted software building through small experiments.
 
 This project is intentionally simple. Version 0.1 uses only vanilla HTML, CSS, and JavaScript. There are no frameworks, build tools, backend services, databases, login features, or external dependencies.
+GitHub Pages enabled.
 
 ## What is included in V0.1
 
