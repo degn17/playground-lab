@@ -28,6 +28,12 @@
         <p>Small beginner-friendly ideas to build, test, break, and improve.</p>
       </div>
 
+      <div class="filter-controls" aria-label="Filter experiments by status">
+        <button class="filter-button active" type="button" data-filter="All" aria-pressed="true">All</button>
+        <button class="filter-button" type="button" data-filter="Todo" aria-pressed="false">Todo</button>
+        <button class="filter-button" type="button" data-filter="Done" aria-pressed="false">Done</button>
+      </div>
+
       <div id="experiment-grid" class="experiment-grid" aria-live="polite"></div>
     </section>
   </main>

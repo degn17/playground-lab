@@ -17,6 +17,13 @@ Create the first simple version of Playground Lab. The V0.1 goal is to provide a
 - Added initial documentation files
 - Confirmed GitHub Pages deployment is working
 - Added a visible `v0.1` version badge to the homepage title
+- Added All, Todo, and Done filter buttons above the experiment card grid
+
+## Current UI behavior
+
+- The homepage keeps the existing `v0.1` version badge visible in the header.
+- Experiment cards still render from the JavaScript experiment data array.
+- The experiment grid can now be filtered by All, Todo, or Done status without adding dependencies or backend features.
 
 ## Next steps
 

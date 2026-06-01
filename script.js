@@ -2,7 +2,7 @@ const experiments = [
   {
     title: 'Dark Mode Toggle',
     description: 'A simple UI theme switcher.',
-    status: 'Todo',
+    status: 'Done',
     tags: ['HTML', 'CSS', 'JavaScript'],
   },
   {
@@ -26,12 +26,14 @@ const experiments = [
   {
     title: 'Bug Museum',
     description: 'A place to record bugs and what they teach.',
-    status: 'Todo',
+    status: 'Done',
     tags: ['Debugging', 'Documentation'],
   },
 ];
 
 const experimentGrid = document.querySelector('#experiment-grid');
+const filterButtons = document.querySelectorAll('.filter-button');
+let activeFilter = 'All';
 
 function createTagList(tags) {
   return tags
@@ -53,8 +55,32 @@ function createExperimentCard(experiment) {
   `;
 }
 
-function renderExperiments() {
-  experimentGrid.innerHTML = experiments.map(createExperimentCard).join('');
+function getFilteredExperiments() {
+  if (activeFilter === 'All') {
+    return experiments;
+  }
+
+  return experiments.filter((experiment) => experiment.status === activeFilter);
 }
+
+function updateFilterButtons() {
+  filterButtons.forEach((button) => {
+    const isActive = button.dataset.filter === activeFilter;
+    button.classList.toggle('active', isActive);
+    button.setAttribute('aria-pressed', isActive.toString());
+  });
+}
+
+function renderExperiments() {
+  experimentGrid.innerHTML = getFilteredExperiments().map(createExperimentCard).join('');
+}
+
+filterButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    activeFilter = button.dataset.filter;
+    updateFilterButtons();
+    renderExperiments();
+  });
+});
 
 renderExperiments();
