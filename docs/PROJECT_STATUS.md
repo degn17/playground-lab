@@ -2,11 +2,11 @@
 
 ## Version
 
-V0.1 - Initial static homepage structure
+V0.2 - Experiment status filters
 
 ## Current goal
 
-Create the first simple version of Playground Lab. The V0.1 goal is to provide a clean static homepage that introduces the project and displays a responsive grid of experiment cards rendered from JavaScript data.
+Playground Lab V0.2 adds simple status filtering to the static homepage so visitors can view All, Todo, or Done experiment cards while keeping the app dependency-free and beginner-friendly.
 
 ## Completed in V0.1
 
@@ -17,6 +17,17 @@ Create the first simple version of Playground Lab. The V0.1 goal is to provide a
 - Added initial documentation files
 - Confirmed GitHub Pages deployment is working
 - Added a visible `v0.1` version badge to the homepage title
+
+## Completed in V0.2
+
+- Renamed the current homepage version badge to `v0.2`
+- Added All, Todo, and Done filter buttons above the experiment card grid
+
+## Current UI behavior
+
+- The homepage keeps the `v0.2` version badge visible in the header.
+- Experiment cards still render from the JavaScript experiment data array.
+- The experiment grid can now be filtered by All, Todo, or Done status without adding dependencies or backend features.
 
 ## Next steps
 

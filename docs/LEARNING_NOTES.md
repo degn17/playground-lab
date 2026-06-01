@@ -27,3 +27,8 @@ Write the main takeaway in your own words.
 ### Next question
 
 What do you want to learn next?
+
+## 2026-06-01 - Experiment status filters
+
+This status filter update is named V0.2. It practices basic JavaScript filtering and re-rendering. The page keeps the experiment card data in an array, filters that array by status when a button is clicked, and re-renders the card grid so the visible cards match the selected All, Todo, or Done filter.
+

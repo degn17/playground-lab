@@ -12,7 +12,7 @@
       <p class="eyebrow">Personal tech playground</p>
       <div class="title-row">
         <h1>Playground Lab</h1>
-        <span class="version-badge" aria-label="Version 0.1">v0.1</span>
+        <span class="version-badge" aria-label="Version 0.2">v0.2</span>
       </div>
       <p class="intro">
         A simple place for learning frontend development, practicing GitHub workflow,
@@ -26,6 +26,12 @@
       <div class="section-heading">
         <h2 id="experiments-heading">Experiments</h2>
         <p>Small beginner-friendly ideas to build, test, break, and improve.</p>
+      </div>
+
+      <div class="filter-controls" aria-label="Filter experiments by status">
+        <button class="filter-button active" type="button" data-filter="All" aria-pressed="true">All</button>
+        <button class="filter-button" type="button" data-filter="Todo" aria-pressed="false">Todo</button>
+        <button class="filter-button" type="button" data-filter="Done" aria-pressed="false">Done</button>
       </div>
 
       <div id="experiment-grid" class="experiment-grid" aria-live="polite"></div>
