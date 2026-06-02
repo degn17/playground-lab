@@ -177,6 +177,11 @@ h1 {
   font-size: 0.8rem;
 }
 
+.card-actions {
+  display: grid;
+  gap: 8px;
+}
+
 .card-button {
   width: 100%;
   padding: 10px 14px;
@@ -192,6 +197,27 @@ h1 {
 .card-button:hover,
 .card-button:focus {
   background: #1d4ed8;
+}
+
+.card-button-disabled,
+.card-button-disabled:hover,
+.card-button-disabled:focus {
+  color: #6b7280;
+  background: #e5e7eb;
+  cursor: not-allowed;
+}
+
+.direct-experiment-link {
+  color: #1d4ed8;
+  font-size: 0.88rem;
+  font-weight: 700;
+  overflow-wrap: anywhere;
+  text-align: center;
+}
+
+.direct-experiment-link:hover,
+.direct-experiment-link:focus {
+  color: #1e40af;
 }
 
 @media (max-width: 520px) {

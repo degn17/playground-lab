@@ -2,11 +2,11 @@
 
 ## Version
 
-V0.3 - First standalone experiment page
+V0.3.1 - LocalStorage Todo access path bugfix
 
 ## Current goal
 
-Playground Lab V0.3 adds the first standalone experiment page while keeping the app dependency-free and beginner-friendly.
+Playground Lab V0.3.1 fixes the LocalStorage Todo homepage access path so the experiment is clearly reachable from the deployed GitHub Pages homepage on desktop and mobile.
 
 ## Completed in V0.1
 
@@ -30,17 +30,26 @@ Playground Lab V0.3 adds the first standalone experiment page while keeping the 
 - Updated the LocalStorage Todo card to `Done` and linked it to the new page
 - Built the LocalStorage Todo experiment to practice browser-based data persistence with `localStorage`
 
+## Completed in V0.3.1
+
+- Renamed the current homepage version badge to `v0.3.1`
+- Fixed the LocalStorage Todo homepage access path so the `Done` card has a clear working `experiments/localstorage-todo.html` link
+- Added a visible direct link on the LocalStorage Todo card to make the available experiment obvious on mobile
+- Confirmed the direct GitHub Pages test path should be:
+  https://degn17.github.io/playground-lab/experiments/localstorage-todo.html
+
 ## Current UI behavior
 
-- The homepage keeps the `v0.3` version badge visible in the header.
+- The homepage keeps the `v0.3.1` version badge visible in the header.
 - Experiment cards still render from the JavaScript experiment data array.
 - The experiment grid can be filtered by All, Todo, or Done status without adding dependencies or backend features.
+- The LocalStorage Todo experiment card is marked `Done` and links to `experiments/localstorage-todo.html` from both its button and visible direct link.
 - The LocalStorage Todo experiment page lets visitors add, complete, and delete todo items that persist in the current browser.
 
 ## Next steps
 
 - Manually test the page in a browser
-- Verify the LocalStorage Todo experiment through GitHub Pages
+- Verify the LocalStorage Todo experiment through GitHub Pages at https://degn17.github.io/playground-lab/experiments/localstorage-todo.html
 - Add project notes as learning happens
 - Track bugs in `docs/BUG_LIST.md`
 - Keep future changes small and easy to review
@@ -59,4 +68,4 @@ Current workflow:
 4. GitHub Pages deploys automatically.
 5. The result can be verified through a browser or mobile phone.
 
-This confirms that the project can now be developed and tested remotely without relying on local git sync for every small update. GitHub Pages remains the verification method for V0.3 after the pull request is merged.
+This confirms that the project can now be developed and tested remotely without relying on local git sync for every small update. GitHub Pages remains the verification method for V0.3.1 after the pull request is merged.
