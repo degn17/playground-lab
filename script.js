@@ -8,8 +8,9 @@ const experiments = [
   {
     title: 'LocalStorage Todo',
     description: 'A small todo widget that saves data in the browser.',
-    status: 'Todo',
+    status: 'Done',
     tags: ['JavaScript', 'localStorage'],
+    url: 'experiments/localstorage-todo.html',
   },
   {
     title: 'GitHub Repo Viewer',
@@ -41,6 +42,14 @@ function createTagList(tags) {
     .join('');
 }
 
+function createExperimentAction(experiment) {
+  if (experiment.url) {
+    return `<a class="card-button" href="${experiment.url}">Open experiment</a>`;
+  }
+
+  return '<button class="card-button" type="button">Open experiment</button>';
+}
+
 function createExperimentCard(experiment) {
   return `
     <article class="experiment-card">
@@ -50,7 +59,7 @@ function createExperimentCard(experiment) {
       <ul class="tag-list" aria-label="Tech tags for ${experiment.title}">
         ${createTagList(experiment.tags)}
       </ul>
-      <button class="card-button" type="button">Open experiment</button>
+      ${createExperimentAction(experiment)}
     </article>
   `;
 }
