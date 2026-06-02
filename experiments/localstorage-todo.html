@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LocalStorage Todo | Playground Lab</title>
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <header class="site-header compact-header">
+    <div class="header-content">
+      <p class="eyebrow">Experiment</p>
+      <h1>LocalStorage Todo</h1>
+      <p class="intro">
+        Add todo items, mark them done, and save the list in this browser with localStorage.
+      </p>
+    </div>
+  </header>
+
+  <main class="page-content experiment-page">
+    <a class="back-link" href="../index.html">Back to Playground Lab</a>
+
+    <section class="todo-panel" aria-labelledby="todo-heading">
+      <div class="section-heading">
+        <h2 id="todo-heading">Todo list</h2>
+        <p>Refresh the page after adding or completing items to see the saved state remain.</p>
+      </div>
+
+      <form class="todo-form" id="todo-form">
+        <label class="visually-hidden" for="todo-input">Todo item</label>
+        <input id="todo-input" class="todo-input" type="text" placeholder="Add a todo item" autocomplete="off" required>
+        <button class="card-button todo-add-button" type="submit">Add</button>
+      </form>
+
+      <ul class="todo-list" id="todo-list" aria-live="polite"></ul>
+      <p class="empty-message" id="empty-message">No todo items yet. Add one above to get started.</p>
+    </section>
+  </main>
+
+  <script>
+    const storageKey = 'playgroundLab.localStorageTodo.items';
+    const todoForm = document.querySelector('#todo-form');
+    const todoInput = document.querySelector('#todo-input');
+    const todoList = document.querySelector('#todo-list');
+    const emptyMessage = document.querySelector('#empty-message');
+
+    let todos = loadTodos();
+
+    function loadTodos() {
+      const savedTodos = localStorage.getItem(storageKey);
+
+      if (!savedTodos) {
+        return [];
+      }
+
+      return JSON.parse(savedTodos);
+    }
+
+    function saveTodos() {
+      localStorage.setItem(storageKey, JSON.stringify(todos));
+    }
+
+    function createTodo(text) {
+      return {
+        id: Date.now().toString(),
+        text,
+        done: false,
+      };
+    }
+
+    function renderTodos() {
+      todoList.innerHTML = '';
+      emptyMessage.hidden = todos.length > 0;
+
+      todos.forEach((todo) => {
+        const item = document.createElement('li');
+        item.className = 'todo-item';
+
+        const label = document.createElement('label');
+        label.className = 'todo-label';
+
+        const checkbox = document.createElement('input');
+        checkbox.type = 'checkbox';
+        checkbox.checked = todo.done;
+        checkbox.addEventListener('change', () => {
+          todo.done = checkbox.checked;
+          saveTodos();
+          renderTodos();
+        });
+
+        const text = document.createElement('span');
+        text.textContent = todo.text;
+        text.className = todo.done ? 'todo-text todo-text-done' : 'todo-text';
+
+        const deleteButton = document.createElement('button');
+        deleteButton.className = 'delete-button';
+        deleteButton.type = 'button';
+        deleteButton.textContent = 'Delete';
+        deleteButton.addEventListener('click', () => {
+          todos = todos.filter((itemToKeep) => itemToKeep.id !== todo.id);
+          saveTodos();
+          renderTodos();
+        });
+
+        label.append(checkbox, text);
+        item.append(label, deleteButton);
+        todoList.append(item);
+      });
+    }
+
+    todoForm.addEventListener('submit', (event) => {
+      event.preventDefault();
+      const todoText = todoInput.value.trim();
+
+      if (!todoText) {
+        return;
+      }
+
+      todos.push(createTodo(todoText));
+      saveTodos();
+      renderTodos();
+      todoForm.reset();
+      todoInput.focus();
+    });
+
+    renderTodos();
+  </script>
+</body>
+</html>

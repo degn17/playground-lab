@@ -2,11 +2,11 @@
 
 ## Version
 
-V0.2 - Experiment status filters
+V0.3 - First standalone experiment page
 
 ## Current goal
 
-Playground Lab V0.2 adds simple status filtering to the static homepage so visitors can view All, Todo, or Done experiment cards while keeping the app dependency-free and beginner-friendly.
+Playground Lab V0.3 adds the first standalone experiment page while keeping the app dependency-free and beginner-friendly.
 
 ## Completed in V0.1
 
@@ -23,16 +23,24 @@ Playground Lab V0.2 adds simple status filtering to the static homepage so visit
 - Renamed the current homepage version badge to `v0.2`
 - Added All, Todo, and Done filter buttons above the experiment card grid
 
+## Completed in V0.3
+
+- Renamed the current homepage version badge to `v0.3`
+- Added the first standalone experiment page at `experiments/localstorage-todo.html`
+- Updated the LocalStorage Todo card to `Done` and linked it to the new page
+- Built the LocalStorage Todo experiment to practice browser-based data persistence with `localStorage`
+
 ## Current UI behavior
 
-- The homepage keeps the `v0.2` version badge visible in the header.
+- The homepage keeps the `v0.3` version badge visible in the header.
 - Experiment cards still render from the JavaScript experiment data array.
-- The experiment grid can now be filtered by All, Todo, or Done status without adding dependencies or backend features.
+- The experiment grid can be filtered by All, Todo, or Done status without adding dependencies or backend features.
+- The LocalStorage Todo experiment page lets visitors add, complete, and delete todo items that persist in the current browser.
 
 ## Next steps
 
 - Manually test the page in a browser
-- Pick the first small experiment to build
+- Verify the LocalStorage Todo experiment through GitHub Pages
 - Add project notes as learning happens
 - Track bugs in `docs/BUG_LIST.md`
 - Keep future changes small and easy to review
@@ -51,4 +59,4 @@ Current workflow:
 4. GitHub Pages deploys automatically.
 5. The result can be verified through a browser or mobile phone.
 
-This confirms that the project can now be developed and tested remotely without relying on local git sync for every small update.
+This confirms that the project can now be developed and tested remotely without relying on local git sync for every small update. GitHub Pages remains the verification method for V0.3 after the pull request is merged.
