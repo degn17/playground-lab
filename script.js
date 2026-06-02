@@ -44,10 +44,19 @@ function createTagList(tags) {
 
 function createExperimentAction(experiment) {
   if (experiment.url) {
-    return `<a class="card-button" href="${experiment.url}">Open experiment</a>`;
+    return `
+      <div class="card-actions">
+        <a class="card-button" href="${experiment.url}">Open experiment</a>
+        <a class="direct-experiment-link" href="${experiment.url}">${experiment.url}</a>
+      </div>
+    `;
   }
 
-  return '<button class="card-button" type="button">Open experiment</button>';
+  return `
+    <div class="card-actions">
+      <button class="card-button card-button-disabled" type="button" disabled>Not available yet</button>
+    </div>
+  `;
 }
 
 function createExperimentCard(experiment) {
